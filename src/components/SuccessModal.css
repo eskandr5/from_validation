@@ -1,0 +1,97 @@
+/* ===== Modal Overlay ===== */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.35s ease-out;
+}
+
+/* ===== Modal Box ===== */
+.modal-content {
+    background: linear-gradient(145deg, #ffffff, #f1f5f9);
+    width: min(90%, 420px);
+    padding: 32px 28px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+    animation: scaleUp 0.4s ease-out;
+}
+
+/* ===== Icon ===== */
+.modal-content svg {
+    font-size: 64px;
+    color: #4e54c8;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 8px 16px #4e54c880);
+}
+
+/* ===== Title ===== */
+.modal-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+/* ===== Text ===== */
+.modal-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 24px;
+}
+
+/* ===== Button ===== */
+.modal-content button {
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #4e54c8, #4e54c8);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 25px #4e54c898;
+}
+
+.modal-content button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px #4e54c8;
+}
+
+.modal-content button:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px #4e54c8a9;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
