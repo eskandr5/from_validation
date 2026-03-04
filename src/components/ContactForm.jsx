@@ -17,6 +17,18 @@ const ContactForm = () => {
 
     const [isSubmaited, setIsSubmaited] = useState(false);
 
+    const handleNameChange = (e) => {
+        const value = e.target.value;
+        setName(value);
+
+        if (value.trim() === "") {
+            setNameError("Name is required");
+        } else if (value.trim().length < 3) {
+            setNameError("Name must be at least 3 characters");
+        } else {
+            setNameError("valid");
+        }
+    };
     const handlePhoneChange = (e) => {
         const value = e.target.value;
         setPhone(value);
